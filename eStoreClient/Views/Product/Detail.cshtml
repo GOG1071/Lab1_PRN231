@@ -1,0 +1,37 @@
+﻿@using BusinessObject
+@model Product
+@{
+    ViewBag.Title = Model.ProductName;
+    Layout = "_Layout";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<div class="border">
+     <div class="mb-3">
+            <label asp-for="ProductId"></label>
+            <input disabled asp-for="ProductId" class="form-control" value="@Model.ProductId"/>
+        </div>
+    <div class="mb-3">
+        <label asp-for="CategoryId"></label>
+        <input disabled asp-for="CategoryId" class="form-control" value="@Model.CategoryId"/>
+    </div>
+    <div class="mb-3">
+        <label asp-for="ProductName"></label>
+        <input disabled asp-for="ProductName" class="form-control" value="@Model.ProductName"/>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Weight"></label>
+        <input disabled asp-for="Weight" class="form-control" value="@Model.Weight"/>
+    </div>
+    <div class="mb-3">
+        <label asp-for="UnitPrice"></label>
+        <input disabled asp-for="UnitPrice" class="form-control" value="@Model.UnitPrice"/>
+    </div>
+    <div class="mb-3">
+        <label asp-for="UnitsInStock"></label>
+        <input disabled asp-for="UnitsInStock" class="form-control" value="@Model.UnitsInStock"/>
+    </div>
+
+    <a asp-action="Index">Back to List</a>
+</div>
