@@ -175,6 +175,44 @@ namespace BusinessObject.Migrations
                     b.HasKey("OrderId");
 
                     b.ToTable("Orders");
+
+                    b.HasData(
+                        new
+                        {
+                            OrderId = 1,
+                            Freight = 0m,
+                            MemberId = 2,
+                            OrderDate = new DateTime(2023, 9, 27, 22, 50, 24, 313, DateTimeKind.Local).AddTicks(2883),
+                            RequiredDate = new DateTime(2023, 9, 27, 0, 0, 0, 0, DateTimeKind.Local),
+                            ShippedDate = new DateTime(2023, 9, 27, 0, 0, 0, 0, DateTimeKind.Local)
+                        },
+                        new
+                        {
+                            OrderId = 2,
+                            Freight = 0m,
+                            MemberId = 2,
+                            OrderDate = new DateTime(2023, 9, 27, 22, 50, 24, 313, DateTimeKind.Local).AddTicks(2899),
+                            RequiredDate = new DateTime(2023, 9, 27, 0, 0, 0, 0, DateTimeKind.Local),
+                            ShippedDate = new DateTime(2023, 9, 27, 0, 0, 0, 0, DateTimeKind.Local)
+                        },
+                        new
+                        {
+                            OrderId = 3,
+                            Freight = 0m,
+                            MemberId = 3,
+                            OrderDate = new DateTime(2023, 9, 27, 22, 50, 24, 313, DateTimeKind.Local).AddTicks(2901),
+                            RequiredDate = new DateTime(2023, 9, 27, 0, 0, 0, 0, DateTimeKind.Local),
+                            ShippedDate = new DateTime(2023, 9, 27, 0, 0, 0, 0, DateTimeKind.Local)
+                        },
+                        new
+                        {
+                            OrderId = 4,
+                            Freight = 0m,
+                            MemberId = 3,
+                            OrderDate = new DateTime(2023, 9, 27, 22, 50, 24, 313, DateTimeKind.Local).AddTicks(2903),
+                            RequiredDate = new DateTime(2023, 9, 27, 0, 0, 0, 0, DateTimeKind.Local),
+                            ShippedDate = new DateTime(2023, 9, 27, 0, 0, 0, 0, DateTimeKind.Local)
+                        });
                 });
 
             modelBuilder.Entity("BusinessObject.OrderDetail", b =>
@@ -197,6 +235,88 @@ namespace BusinessObject.Migrations
                     b.HasKey("OrderId", "ProductId");
 
                     b.ToTable("OrderDetails");
+
+                    b.HasData(
+                        new
+                        {
+                            OrderId = 1,
+                            ProductId = 1,
+                            Discount = 0f,
+                            Quantity = 1,
+                            UnitPrice = 18.00m
+                        },
+                        new
+                        {
+                            OrderId = 1,
+                            ProductId = 2,
+                            Discount = 0f,
+                            Quantity = 1,
+                            UnitPrice = 19.00m
+                        },
+                        new
+                        {
+                            OrderId = 1,
+                            ProductId = 3,
+                            Discount = 0f,
+                            Quantity = 1,
+                            UnitPrice = 10.00m
+                        },
+                        new
+                        {
+                            OrderId = 2,
+                            ProductId = 4,
+                            Discount = 0f,
+                            Quantity = 1,
+                            UnitPrice = 22.00m
+                        },
+                        new
+                        {
+                            OrderId = 2,
+                            ProductId = 5,
+                            Discount = 0f,
+                            Quantity = 1,
+                            UnitPrice = 21.35m
+                        },
+                        new
+                        {
+                            OrderId = 2,
+                            ProductId = 6,
+                            Discount = 0f,
+                            Quantity = 1,
+                            UnitPrice = 25.00m
+                        },
+                        new
+                        {
+                            OrderId = 3,
+                            ProductId = 7,
+                            Discount = 0f,
+                            Quantity = 1,
+                            UnitPrice = 30.00m
+                        },
+                        new
+                        {
+                            OrderId = 3,
+                            ProductId = 8,
+                            Discount = 0f,
+                            Quantity = 1,
+                            UnitPrice = 40.00m
+                        },
+                        new
+                        {
+                            OrderId = 3,
+                            ProductId = 9,
+                            Discount = 0f,
+                            Quantity = 1,
+                            UnitPrice = 97.00m
+                        },
+                        new
+                        {
+                            OrderId = 4,
+                            ProductId = 10,
+                            Discount = 0f,
+                            Quantity = 1,
+                            UnitPrice = 31.00m
+                        });
                 });
 
             modelBuilder.Entity("BusinessObject.Product", b =>

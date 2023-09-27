@@ -1,0 +1,36 @@
+﻿@using BusinessObject
+@model Order
+@{
+    ViewBag.Title = "Create Order";
+    Layout = "_Layout";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<form method="post">
+    <div class="border">
+        <div class="mb-3">
+            <label asp-for="MemberId"></label>
+            <input asp-for="MemberId" class="form-control"/>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Freight"></label>
+            <input asp-for="Freight" class="form-control"/>
+        </div>
+        <div class="mb-3">
+            <label asp-for="OrderDate"></label>
+            <input asp-for="OrderDate" class="form-control"/>
+        </div>
+        <div class="mb-3">
+            <label asp-for="RequiredDate"></label>
+            <input asp-for="RequiredDate" class="form-control"/>
+        </div>
+        <div class="mb-3">
+            <label asp-for="ShippedDate"></label>
+            <input asp-for="ShippedDate" class="form-control"/>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Create</button>
+    </div>
+    <a asp-action="Index">Back to List</a>
+</form>

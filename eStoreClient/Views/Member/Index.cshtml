@@ -1,16 +1,44 @@
-﻿@{
-    Layout = null;
+﻿@model IEnumerable<BusinessObject.Member>
+
+@{
+    ViewData["Title"] = "Home Page";
 }
 
-<!DOCTYPE html>
+<h1>Index</h1>
 
-<html>
-<head>
-    <title>title</title>
-</head>
-<body>
-<div>
-      
-</div>
-</body>
-</html>
+<p><a asp-action="Create">Create new</a></p>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CompanyName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.City)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Country)
+        </th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@Html.DisplayFor(Model => item.CompanyName)</td>
+            <td>@Html.DisplayFor(Model => item.Email)</td>
+            <td>@Html.DisplayFor(Model => item.City)</td>
+            <td>@Html.DisplayFor(Model => item.Country)</td>
+            <td>
+                <a asp-controller="Member" asp-action="Detail" asp-route-id="@item.MemberId">Detail</a>|
+                <a asp-controller="Member" asp-action="Edit" asp-route-id="@item.MemberId">Edit</a>|
+                <a asp-controller="Member" asp-action="Delete" asp-route-id="@item.MemberId">Delete</a>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>

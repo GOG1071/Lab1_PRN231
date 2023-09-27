@@ -1,0 +1,29 @@
+﻿@using BusinessObject
+@model OrderDetail
+@{
+    ViewBag.Title = Model.OrderId;
+    Layout = "_Layout";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<div class="border">
+     <div class="mb-3">
+            <label asp-for="ProductId"></label>
+            <input disabled asp-for="ProductId" class="form-control" value="@Model.ProductId"/>
+        </div>
+    <div class="mb-3">
+        <label asp-for="UnitPrice"></label>
+        <input disabled asp-for="UnitPrice" class="form-control" value="@Model.UnitPrice"/>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Quantity"></label>
+        <input disabled asp-for="Quantity" class="form-control" value="@Model.Quantity"/>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Discount"></label>
+        <input disabled asp-for="Discount" class="form-control" value="@Model.Discount"/>
+    </div>
+
+    <a asp-action="Index" asp-route-id="@Model.OrderId">Back to List</a>
+</div>

@@ -1,28 +1,27 @@
 ﻿namespace eStoreClient.Controllers;
 
 using System.Net.Http.Headers;
-using System.Text.Json;
 using BusinessObject;
 using DataAccess;
 using Microsoft.AspNetCore.Mvc;
 
-public class MemberController : Controller
+public class OrderController : Controller
 {
     private readonly HttpClient _httpClient = new HttpClient();
-    private string _baseUrl = "http://localhost:5172/Member";
+    private          string     _baseUrl    = "http://localhost:5172/Order";
 
-    public MemberController()
+    public OrderController()
     {
         this._httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
     }
-    
+
+    private readonly OrderRepository orderRepository = new OrderRepository();
+
     #region GET
 
-    private readonly MemberRepository memberRepository = new MemberRepository();
-    
     public async Task<IActionResult> Index()
     {
-        var list = this.memberRepository.GetAllMembers();
+        var list = this.orderRepository.GetAllOrders();
         return View(list);
     }
 
@@ -30,30 +29,30 @@ public class MemberController : Controller
     {
         if (id == null || id <= 0)
             return this.NotFound();
-        var member = this.memberRepository.GetMemberById(id.Value);
-        if (member == null)
+        var order = this.orderRepository.GetOrderById(id.Value);
+        if (order == null)
             return this.NotFound();
-        return this.View(member);
+        return this.View(order);
     }
 
     public ActionResult Edit(int id)
     {
         if (id == null || id <= 0)
             return this.NotFound();
-        var member = this.memberRepository.GetMemberById(id);
-        if (member == null)
+        var order = this.orderRepository.GetOrderById(id);
+        if (order == null)
             return this.NotFound();
-        return this.View(member);
+        return this.View(order);
     }
 
     public ActionResult Delete(int id)
     {
         if (id == null || id <= 0)
             return this.NotFound();
-        var member = this.memberRepository.GetMemberById(id);
-        if (member == null)
+        var order = this.orderRepository.GetOrderById(id);
+        if (order == null)
             return this.NotFound();
-        return this.View(member);
+        return this.View(order);
     }
     public ActionResult Create() { return this.View(); }
 
@@ -61,22 +60,21 @@ public class MemberController : Controller
 
     #region CUD
 
-    [HttpPost] [ValidateAntiForgeryToken] public async Task<IActionResult> Create(Member member)
+    [HttpPost] [ValidateAntiForgeryToken] public async Task<IActionResult> Create(Order order)
     {
-        this.memberRepository.AddMember(member);
+        this.orderRepository.AddOrder(order);
         return this.RedirectToAction("Index");
     }
 
-    [HttpPost] [ValidateAntiForgeryToken] public async Task<IActionResult> Edit(Member member)
+    [HttpPost] [ValidateAntiForgeryToken] public async Task<IActionResult> Edit(Order order)
     {
-        this.memberRepository.UpdateMember(member);
+        this.orderRepository.UpdateOrder(order);
         return this.RedirectToAction("Index");
     }
 
-    [HttpPost] [ValidateAntiForgeryToken]
-    public async Task<IActionResult> Delete(Member member)
+    [HttpPost] [ValidateAntiForgeryToken] public async Task<IActionResult> Delete(Order order)
     {
-        this.memberRepository.DeleteMember(member);
+        this.orderRepository.DeleteOrder(order);
         return this.RedirectToAction("Index");
     }
 

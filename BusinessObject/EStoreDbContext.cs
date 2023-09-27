@@ -51,6 +51,24 @@ public class EStoreDbContext : DbContext
             new Member { MemberId = 2, Password = "user@@", CompanyName = "User", Email = "a@amail.com", City = "B", Country = "B"},
             new Member { MemberId = 3, Password = "user@@", CompanyName = "User", Email = "b@bmail.com", City = "C", Country = "C"}
             );
-        
+        modelBuilder.Entity<Order>().HasData(
+            new Order { OrderId = 1, MemberId = 2, OrderDate = DateTime.Now, RequiredDate = DateTime.Today, ShippedDate = DateTime.Today},
+            new Order { OrderId = 2, MemberId = 2, OrderDate = DateTime.Now, RequiredDate = DateTime.Today, ShippedDate = DateTime.Today},
+            new Order { OrderId = 3, MemberId = 3, OrderDate = DateTime.Now, RequiredDate = DateTime.Today, ShippedDate = DateTime.Today},
+            new Order { OrderId = 4, MemberId = 3, OrderDate = DateTime.Now, RequiredDate = DateTime.Today, ShippedDate = DateTime.Today}
+            );
+        modelBuilder.Entity<OrderDetail>().HasData(
+            new OrderDetail { OrderId = 1, ProductId = 1, UnitPrice = 18.00m, Quantity = 1, Discount = 0.00f },
+            new OrderDetail { OrderId = 1, ProductId = 2, UnitPrice = 19.00m, Quantity = 1, Discount = 0.00f },
+            new OrderDetail { OrderId = 1, ProductId = 3, UnitPrice = 10.00m, Quantity = 1, Discount = 0.00f },
+            new OrderDetail { OrderId = 2, ProductId = 4, UnitPrice = 22.00m, Quantity = 1, Discount = 0.00f },
+            new OrderDetail { OrderId = 2, ProductId = 5, UnitPrice = 21.35m, Quantity = 1, Discount = 0.00f },
+            new OrderDetail { OrderId = 2, ProductId = 6, UnitPrice = 25.00m, Quantity = 1, Discount = 0.00f },
+            new OrderDetail { OrderId = 3, ProductId = 7, UnitPrice = 30.00m, Quantity = 1, Discount = 0.00f },
+            new OrderDetail { OrderId = 3, ProductId = 8, UnitPrice = 40.00m, Quantity = 1, Discount = 0.00f },
+            new OrderDetail { OrderId = 3, ProductId = 9, UnitPrice = 97.00m, Quantity = 1, Discount = 0.00f },
+            new OrderDetail { OrderId = 4, ProductId = 10, UnitPrice = 31.00m, Quantity = 1, Discount = 0.00f }
+            );
+
     }
 }

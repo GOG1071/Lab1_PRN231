@@ -2,8 +2,6 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess.csproj", "{4F058D84-C6A6-4654-8520-97E16FC045BF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eStore", "eStore\eStore.csproj", "{C852B672-4FE0-42E2-844D-487ECC74A746}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessObject", "BusinessObject\BusinessObject.csproj", "{6C681C53-2D8F-4FE5-8DEC-A01B380134A2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eStoreAPI", "eStoreAPI\eStoreAPI.csproj", "{842B4D64-2588-4308-B672-98F3C48876E4}"
@@ -20,10 +18,6 @@ Global
 		{4F058D84-C6A6-4654-8520-97E16FC045BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4F058D84-C6A6-4654-8520-97E16FC045BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4F058D84-C6A6-4654-8520-97E16FC045BF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C852B672-4FE0-42E2-844D-487ECC74A746}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C852B672-4FE0-42E2-844D-487ECC74A746}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C852B672-4FE0-42E2-844D-487ECC74A746}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C852B672-4FE0-42E2-844D-487ECC74A746}.Release|Any CPU.Build.0 = Release|Any CPU
 		{6C681C53-2D8F-4FE5-8DEC-A01B380134A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{6C681C53-2D8F-4FE5-8DEC-A01B380134A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6C681C53-2D8F-4FE5-8DEC-A01B380134A2}.Release|Any CPU.ActiveCfg = Release|Any CPU

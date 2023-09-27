@@ -1,0 +1,33 @@
+﻿@using BusinessObject
+@model Member
+@{
+    ViewBag.Title = Model.CompanyName;
+    Layout = "_Layout";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<div class="border">
+     <div class="mb-3">
+            <label asp-for="MemberId"></label>
+            <input disabled asp-for="MemberId" class="form-control" value="@Model.MemberId"/>
+        </div>
+    <div class="mb-3">
+        <label asp-for="CompanyName"></label>
+        <input disabled asp-for="CompanyName" class="form-control" value="@Model.CompanyName"/>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Email"></label>
+        <input disabled asp-for="Email" class="form-control" value="@Model.Email"/>
+    </div>
+    <div class="mb-3">
+        <label asp-for="City"></label>
+        <input disabled asp-for="City" class="form-control" value="@Model.City"/>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Country"></label>
+        <input disabled asp-for="Country" class="form-control" value="@Model.Country"/>
+    </div>
+
+    <a asp-action="Index">Back to List</a>
+</div>

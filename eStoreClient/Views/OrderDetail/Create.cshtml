@@ -1,0 +1,19 @@
+﻿@using BusinessObject
+@model OrderDetail
+@{
+    ViewBag.Title = "Create Order";
+    Layout = "_Layout";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<form method="post">
+    <div class="border">
+        <div class="mb-3">
+            <label asp-for="OrderId"></label>
+            <input asp-for="OrderId" class="form-control"/>
+        </div>
+        <button type="submit" class="btn btn-primary">Create</button>
+    </div>
+    <a asp-action="Index" asp-route-id="@Model.OrderId">Back to List</a>
+</form>

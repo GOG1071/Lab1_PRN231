@@ -118,6 +118,34 @@ namespace BusinessObject.Migrations
                 });
 
             migrationBuilder.InsertData(
+                table: "OrderDetails",
+                columns: new[] { "OrderId", "ProductId", "Discount", "Quantity", "UnitPrice" },
+                values: new object[,]
+                {
+                    { 1, 1, 0f, 1, 18.00m },
+                    { 1, 2, 0f, 1, 19.00m },
+                    { 1, 3, 0f, 1, 10.00m },
+                    { 2, 4, 0f, 1, 22.00m },
+                    { 2, 5, 0f, 1, 21.35m },
+                    { 2, 6, 0f, 1, 25.00m },
+                    { 3, 7, 0f, 1, 30.00m },
+                    { 3, 8, 0f, 1, 40.00m },
+                    { 3, 9, 0f, 1, 97.00m },
+                    { 4, 10, 0f, 1, 31.00m }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Orders",
+                columns: new[] { "OrderId", "Freight", "MemberId", "OrderDate", "RequiredDate", "ShippedDate" },
+                values: new object[,]
+                {
+                    { 1, 0m, 2, new DateTime(2023, 9, 27, 22, 50, 24, 313, DateTimeKind.Local).AddTicks(2883), new DateTime(2023, 9, 27, 0, 0, 0, 0, DateTimeKind.Local), new DateTime(2023, 9, 27, 0, 0, 0, 0, DateTimeKind.Local) },
+                    { 2, 0m, 2, new DateTime(2023, 9, 27, 22, 50, 24, 313, DateTimeKind.Local).AddTicks(2899), new DateTime(2023, 9, 27, 0, 0, 0, 0, DateTimeKind.Local), new DateTime(2023, 9, 27, 0, 0, 0, 0, DateTimeKind.Local) },
+                    { 3, 0m, 3, new DateTime(2023, 9, 27, 22, 50, 24, 313, DateTimeKind.Local).AddTicks(2901), new DateTime(2023, 9, 27, 0, 0, 0, 0, DateTimeKind.Local), new DateTime(2023, 9, 27, 0, 0, 0, 0, DateTimeKind.Local) },
+                    { 4, 0m, 3, new DateTime(2023, 9, 27, 22, 50, 24, 313, DateTimeKind.Local).AddTicks(2903), new DateTime(2023, 9, 27, 0, 0, 0, 0, DateTimeKind.Local), new DateTime(2023, 9, 27, 0, 0, 0, 0, DateTimeKind.Local) }
+                });
+
+            migrationBuilder.InsertData(
                 table: "Products",
                 columns: new[] { "ProductId", "CategoryId", "ProductName", "UnitPrice", "UnitsInStock", "Weight" },
                 values: new object[,]

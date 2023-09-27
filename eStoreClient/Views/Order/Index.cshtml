@@ -1,16 +1,48 @@
-﻿@{
-    Layout = null;
+﻿@model IEnumerable<BusinessObject.Order>
+
+@{
+    ViewData["Title"] = "Home Page";
 }
 
-<!DOCTYPE html>
+<h1>Index</h1>
 
-<html>
-<head>
-    <title>title</title>
-</head>
-<body>
-<div>
-      
-</div>
-</body>
-</html>
+<p><a asp-action="Create">Create new</a></p>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.MemberId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Freight)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OrderDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RequiredDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ShippedDate)
+        </th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@Html.DisplayFor(Model => item.MemberId)</td>
+            <td>@Html.DisplayFor(Model => item.Freight)</td>
+            <td>@Html.DisplayFor(Model => item.OrderDate)</td>
+            <td>@Html.DisplayFor(Model => item.RequiredDate)</td>
+            <td>@Html.DisplayFor(Model => item.ShippedDate)</td>
+            <td>
+                <a asp-controller="Order" asp-action="Detail" asp-route-id="@item.OrderId">Detail</a>|
+                <a asp-controller="Order" asp-action="Edit" asp-route-id="@item.OrderId">Edit</a>|
+                <a asp-controller="Order" asp-action="Delete" asp-route-id="@item.OrderId">Delete</a>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>

@@ -1,0 +1,37 @@
+﻿@using BusinessObject
+@model OrderDetail
+
+@{
+    ViewBag.Title = "Delete " + Model.OrderId;
+    Layout = "_Layout";
+}
+
+<h2>Delete @ViewBag.Title</h2>
+
+<form asp-action="Delete" method="post">
+    <div class="border">
+        <div class="mb-3">
+            <label asp-for="OrderId"></label>
+            <input disabled asp-for="OrderId" class="form-control" value="@Model.OrderId"/>
+        </div>
+        <div class="mb-3">
+            <label asp-for="ProductId"></label>
+            <input disabled asp-for="ProductId" class="form-control" value="@Model.ProductId"/>
+        </div>
+        <div class="mb-3">
+            <label asp-for="UnitPrice"></label>
+            <input disabled asp-for="UnitPrice" class="form-control" value="@Model.UnitPrice"/>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Quantity"></label>
+            <input disabled asp-for="Quantity" class="form-control" value="@Model.Quantity"/>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Discount"></label>
+            <input disabled asp-for="Discount" class="form-control" value="@Model.Discount"/>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Delete</button>
+        <a asp-action="Index" asp-route-id="@Model.OrderId">Back to List</a>
+    </div>
+</form>

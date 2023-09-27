@@ -2998,19 +2998,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\golde\\.nuget\\packages\\": {}
+    "C:\\Users\\PC\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\golde\\RiderProjects\\Lab1_PRN231\\eStoreClient\\eStoreClient.csproj",
+      "projectUniqueName": "C:\\Users\\PC\\RiderProjects\\Assignment01Solution_HE163594\\eStoreClient\\eStoreClient.csproj",
       "projectName": "eStoreClient",
-      "projectPath": "C:\\Users\\golde\\RiderProjects\\Lab1_PRN231\\eStoreClient\\eStoreClient.csproj",
-      "packagesPath": "C:\\Users\\golde\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\golde\\RiderProjects\\Lab1_PRN231\\eStoreClient\\obj\\",
+      "projectPath": "C:\\Users\\PC\\RiderProjects\\Assignment01Solution_HE163594\\eStoreClient\\eStoreClient.csproj",
+      "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\PC\\RiderProjects\\Assignment01Solution_HE163594\\eStoreClient\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\golde\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3024,11 +3024,11 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\golde\\RiderProjects\\Lab1_PRN231\\BusinessObject\\BusinessObject.csproj": {
-              "projectPath": "C:\\Users\\golde\\RiderProjects\\Lab1_PRN231\\BusinessObject\\BusinessObject.csproj"
+            "C:\\Users\\PC\\RiderProjects\\Assignment01Solution_HE163594\\BusinessObject\\BusinessObject.csproj": {
+              "projectPath": "C:\\Users\\PC\\RiderProjects\\Assignment01Solution_HE163594\\BusinessObject\\BusinessObject.csproj"
             },
-            "C:\\Users\\golde\\RiderProjects\\Lab1_PRN231\\DataAccess\\DataAccess.csproj": {
-              "projectPath": "C:\\Users\\golde\\RiderProjects\\Lab1_PRN231\\DataAccess\\DataAccess.csproj"
+            "C:\\Users\\PC\\RiderProjects\\Assignment01Solution_HE163594\\DataAccess\\DataAccess.csproj": {
+              "projectPath": "C:\\Users\\PC\\RiderProjects\\Assignment01Solution_HE163594\\DataAccess\\DataAccess.csproj"
             }
           }
         }
@@ -3061,7 +3061,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   }

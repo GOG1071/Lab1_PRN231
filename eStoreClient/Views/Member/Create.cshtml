@@ -1,0 +1,36 @@
+﻿@using BusinessObject
+@model Member
+@{
+    ViewBag.Title = "Create Product";
+    Layout = "_Layout";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<form method="post">
+    <div class="border">
+        <div class="mb-3">
+            <label asp-for="CompanyName"></label>
+            <input asp-for="CompanyName" class="form-control"/>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Email"></label>
+            <input asp-for="Email" class="form-control"/>
+        </div>
+        <div class="mb-3">
+            <label asp-for="City"></label>
+            <input asp-for="City" class="form-control"/>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Country"></label>
+            <input asp-for="Country" class="form-control"/>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Password"></label>
+            <input type="password" asp-for="Password" class="form-control"/>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Create</button>
+    </div>
+    <a asp-action="Index">Back to List</a>
+</form>

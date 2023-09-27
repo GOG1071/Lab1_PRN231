@@ -1,0 +1,38 @@
+﻿@using BusinessObject
+@model Order
+
+@{
+    ViewBag.Title = "Edit " + Model.OrderId;
+    Layout = "_Layout";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<form asp-action="Edit" method="post">
+    <input hidden asp-for="OrderId"/>
+    <div class="border">
+        <div class="mb-3">
+            <label asp-for="MemberId"></label>
+            <input asp-for="MemberId" class="form-control" value="@Model.MemberId"/>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Freight"></label>
+            <input asp-for="Freight" class="form-control" value="@Model.Freight"/>
+        </div>
+        <div class="mb-3">
+            <label asp-for="OrderDate"></label>
+            <input asp-for="OrderDate" class="form-control" value="@Model.OrderDate"/>
+        </div>
+        <div class="mb-3">
+            <label asp-for="RequiredDate"></label>
+            <input asp-for="RequiredDate" class="form-control" value="@Model.RequiredDate"/>
+        </div>
+        <div class="mb-3">
+            <label asp-for="ShippedDate"></label>
+            <input asp-for="ShippedDate" class="form-control" value="@Model.ShippedDate"/>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Save</button>
+        <a asp-action="Index">Back to List</a>
+    </div>
+</form>
